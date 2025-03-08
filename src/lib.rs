@@ -515,7 +515,7 @@ fn render_signal(
 
                     format!(
                         "self.raw.view_bits::<Lsb0>()[{start}..{end}].load_le::<{typ}>()",
-                        typ = signal_to_rust_uint(signal),
+                        typ = signal_to_rust_int(signal),
                         start = start_bit,
                         end = end_bit,
                     )
@@ -525,7 +525,7 @@ fn render_signal(
 
                     format!(
                         "self.raw.view_bits::<Msb0>()[{start}..{end}].load_be::<{typ}>()",
-                        typ = signal_to_rust_uint(signal),
+                        typ = signal_to_rust_int(signal),
                         start = start_bit,
                         end = end_bit
                     )
